@@ -59,3 +59,48 @@ int main() {
 
     cout << count1 << endl << count2 << endl;
 }
+
+/*
+!WHat i Tried
+bool check_report(vector<int> report){
+    bool positive = true;
+    if(report[0]-report[1] < 0)
+        positive = false;
+
+    for (size_t i = 0; i < report.size()-1; i++)
+    {
+        int num = report[i] - report[i+1];
+        num = positive?num:-num;
+        if(!((num<=3) && (num>=1)))
+            return false;
+    }
+    return true;
+
+}
+bool check_reportP2(vector<int> report){
+    bool positive = true, oneTime = true;
+    if(report[0]-report[1] < 0)
+        positive = false;
+
+    for (size_t i = 0; i < report.size()-1; i++)
+    {
+        int num = report[i] - report[i+1];
+        num = positive?num:-num;
+        if(!((num<=3) && (num>=1)))
+            if(oneTime){
+                oneTime = !oneTime;
+                if(i+2==report.size())   
+                    return true;
+                num = report[i] - report[i+2];
+                num = positive?num:-num;
+                i++;
+                if(!((num<=3) && (num>=1)))
+                return false;
+            }
+            else{
+                return false;
+            }
+    }
+    return true;
+
+}*/
